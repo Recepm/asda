@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="description" content="Code Universe">
+    <meta name="keywords" content="Code Universe Özgün Kodların evi">
+    <meta name="copyright" content="Code Universe 2020">
+    <meta name="author" content="Code Universe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://media.discordapp.net/attachments/753352113748312305/778697983209373716/sdasadsadsad.png?width=743&height=677" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/gerekli.css">
+ 
+    
+  </head>
+  <body class="bg-dark text-white">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav" style="background-color: # 7b0406;">
+      <a class="navbar-brand" href="/"><img style="border-radius:50%" width="50" height="50" src="https://media.discordapp.net/attachments/753352113748312305/778697983209373716/sdasadsadsad.png?width=743&height=677">
+            Code Universe
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+                    <div class="ccc">
+           <a class="nav-link" href="/yol1">Kodlar</a>
+          </div>  
+
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" href="/davet">Discord</a>
+          </li>
+          
+          
+           <a class="nav-link" href="/paylas">Kod Paylaş</a>
+          
+        </ul>
+        {{#if user}}
+        
+          <div class="dropdown">
+            <a class="btn btn-outline-warning nav-link text-uppercase" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}} <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/profil/{{user.id}}">Profil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/cikis">Çıkış Yap</a>
+            </div>
+          </div>
+
+        
+        {{else}}
+        <a class="fab fa-discord" href="/giris"> Giriş Yap</a>
+        {{/if}}
+      </div>
+    </nav>
+    
+    {{{body}}}
+    <br><br><br>
+    
+    <footer>
+<div class="footeralt">
+<footer class="footer mt-auto py-3">
+<div class="container">
+<center>
+<a style="color: # 7b0404;">Sizler için buradayız, İstek kod ve Hatalar için sunucumuza gelebilirsiniz. #2019</a>
+<br>
+</center></div>
+</footer></div>
+    </footer>
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

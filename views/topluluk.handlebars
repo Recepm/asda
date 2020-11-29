@@ -1,0 +1,59 @@
+<style>
+.avatar {
+  border-radius: 5% !important;  
+  border: 2px solid white;
+  padding: 1px;
+}
+#avatar2 {
+    width: 200px;
+    height: 200px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    text-align:center;
+}
+    #avatar2:hover {
+        transform: translate(0px,-20px);
+        -webkit-transform: translate(0px,-20px);
+	}
+  </style>
+
+<title>Code Universe</title>
+<br><br>
+  <h1 class="text-center text-light font-weight-bolder">
+    Topluluk Kodlar
+  </h1>
+  <h5 class="text-center text-light font-weight-light">
+    Eğer kodlarla alakalı daha çok bilgiye ulaşmak istiyorsanız <a href="/davet" target="_blank">Discord Sunucumuza</a> katılın!
+  </h5>
+<hr>
+
+<div class="container">
+  <input id="search" type="text" class="form-control" placeholder="Kod Ara" aria-label="Kod Ara" aria-describedby="basic-addon2">
+</div><br>
+
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+
+  {{#each kodlar}}
+  <div class="col mb-1" id="avatar2">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 400px">
+    
+  <div class="container"><center><img src="{{this.icon}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 25%; max-width: 100%; height: 5rem;"></center></b> {{this.k_adi}}  <div </br><b><center>Kod Adı: {{this.isim}}</center></b></div>
+    <p class="container"><b>Açıklama:</b> {{this.desc}}</p>
+         <a href="/topluluk/{{this.id}}" style="background-color: #0069d9;" class="btn btn-md btn-block text-white"><i class="fa fa-eye"></i> Kodu İncele</a> 
+  </div>
+    </div>
+</div>
+{{/each}}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").keyup(function(){
+    var value = $(this).val().toLowerCase();
+    $(".card, .mb-3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>

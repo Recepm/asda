@@ -1,0 +1,60 @@
+<title>Code Universe -{{member.user.username}}</title> <br><br> <div class="container">
+  <div class="twPc-div bg-dark">
+    <a class="twPc-bg twPc-block"></a>
+    <div>
+      <div class="twPc-button">
+        <a href="https://discordapp.com/users/{{member.user.id}}" class="btn btn-primary btn-sm">Discord</a>  
+      </div>
+      <a href="https://discordapp.com/users/{{member.user.id}}" class="twPc-avatarLink">
+        <img alt="Avatar" src="{{avatarURL}}" class="twPc-avatarImg">
+      </a>
+      <div class="twPc-divUser">
+        <div class="twPc-divName">
+          {{member.user.username}}
+        </div>
+        <span>
+          {{#if perms.yetkili}}
+            <span>Kod Paylaşım Yetkilisi</span>
+          {{else}}
+            {{#if perms.destekçi}}
+              <span>Code Universe Destekçisi</span>
+            {{else}}
+              <span>Üye</span>
+            {{/if}}
+          {{/if}}
+        </span>
+        {{#if stats}}
+          <span> | Paylaşılan: {{stats.paylasilan}} - Silinen: {{stats.silinen}} </span>
+        {{/if}}        
+      </div>
+      <div class="twPc-divStats">
+        <h3>Görebildiği Kodlar</h3>
+        <ul class="twPc-Arrange">
+          <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-secondary" href="/normal1">Free Codes ✰ V11</a>
+           <a class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-secondary" href="/normal2">Free Codes ✰ V12</a>
+          {{#if perms.yetkili}}
+            <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/altin">Legend Codes ✰</a>
+          <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-danger" href="/hazir">Altyapı+ ✰</a>
+            <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-primary" href="/elmas">Legandary Codes ✰</a>
+          {{else}}
+            {{#if perms.destekçi}}
+              <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/altin">Legend Codes ✰</a>
+              <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-primary" href="/elmas">Legandary Codes ✰</a>
+              <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-danger" href="/hazir">Altyapı+ ✰</a>
+            {{else}}
+              {{#if perms.altin}}
+                <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/altin">Legend Codes ✰</a>
+              {{/if}}
+              {{#if perms.elmas}}
+                <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-primary" href="/elmas">Legandary Codes ✰</a>
+              {{/if}}
+              {{#if perms.hazir}}
+                <a  class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-danger" href="/hazir">Altyapı+ ✰</a>
+              {{/if}}
+            {{/if}}
+          {{/if}}  
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

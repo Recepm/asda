@@ -1,0 +1,20 @@
+[
+    {
+        "kodlar": {
+            "ping (v11)": {
+                "isim": "ping (v11)",
+                "id": "73qpygyxuF",
+                "desc": "Botun pingini ölçer",
+                "modules": [
+                    "discord.js"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/664121665537703937/a_1d592dc442d29e200875c374523767ab.png",
+                "main_code": "const Discord = require('discord.js')\r\n\r\nexports.run = async (client, message, args) => {\r\n\r\n    let start = Date.now(); message.channel.send(\"Ölçüm Yapılıyor...\").then(message => { \r\n    let diff = (Date.now() - start); \r\n    let API = (client.ping).toFixed(2)\r\n        \r\n        let jaus01 = new Discord.RichEmbed()\r\n        .setTitle(`Bot İstatistik`)\r\n        .setColor(\"CYAN\")\r\n        .setThumbnail(client.user.avatarURL)\r\n        .addField(\"📶・Mesaj Gecikmesi\", `${diff}ms`, true)\r\n        .addField(\"💻・Bot Gecikmesi\", `${API}ms`, true)\r\n        .setFooter(\"Code Universe\", client.user.avatarURL)\r\n        message.edit(jaus01);\r\n      \r\n    });\r\n\r\n}\r\n\r\nexports.conf = {\r\n    enabled: true,\r\n    guildOnly: false,\r\n    aliases: [],\r\n    permLevel: 0\r\n  };\r\n\r\nexports.help = {\r\n    name: 'ping'\r\n} ",
+                "komutlar_code": "Gerektirmiyor",
+                "kod_rank": "normal1",
+                "k_adi": "Sloxy^",
+                "date": "11/19/2020"
+            }
+        }
+    }
+]
